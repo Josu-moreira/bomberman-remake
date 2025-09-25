@@ -15,7 +15,7 @@ Jogador::~Jogador() {
 void Jogador::carregarSprites() {
     int offset_x = 8;
     int offset_y = 6;
-    const char* arquivo = "C:/Users/josue/Desktop/c+/bootcamp/Jogo/imgs/bomberman.png";
+    const char* arquivo = "./imgs/bomberman.png";
     
     sprite = new Sprite(arquivo, 3, 3);
 
@@ -56,10 +56,6 @@ void Jogador::andar()
     else if (IsKeyDown(KEY_A))
     {
         this->x -= velocidade * GetFrameTime();
-        if (this->x < 0.0)
-        {
-            this->x = 0.0;
-        }
 
         setAnim("esquerda");
     }

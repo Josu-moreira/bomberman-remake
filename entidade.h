@@ -15,4 +15,8 @@ public:
     void atualizar();
     virtual void andar();
     virtual void desenhar();
+    float getX() const { return this->x; }
+    float getY() const { return this->y; }
+    void setX(float x) { this->x = x; }
+    void setY(float y) { this->y = y; }
 };

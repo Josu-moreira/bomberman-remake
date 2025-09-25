@@ -23,27 +23,24 @@ int main()
 
     Jogador *jogador = new Jogador(100, 200.0f, 0.0f, 0.0f, 0);
 
-
     Mapa *mapa = new Mapa();
-    mapa->iniciarMapa();
+    mapa->iniciarMapa((int)larguraJanela/4, (int)alturaJanela/5, 10, 10);
+    mapa->setJogador(jogador);
     
     SetTargetFPS(60);
     while (!WindowShouldClose())
     {
         
-        jogador->andar();
-
+        mapa->atualizar();
         BeginDrawing();
 
-            ClearBackground(RAYWHITE);
+            ClearBackground(BLUE);
             mapa->mostrarMapa();
-
-            jogador->desenhar();
 
         EndDrawing();
         //-----------------
     }
 
-    delete jogador;
+    delete mapa;
     CloseWindow();        // Close window and OpenGL context
 }
