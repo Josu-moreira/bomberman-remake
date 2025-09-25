@@ -12,7 +12,7 @@ using namespace std;
 int main()
 {
     const int larguraJanela = 800;
-    const int alturaJanela = 450;
+    const int alturaJanela = 650;
 
     //char teclaPressionada;
     //bool JogoTerminou = false;
@@ -24,7 +24,7 @@ int main()
     Jogador *jogador = new Jogador(100, 200.0f, 0.0f, 0.0f, 0);
 
     Mapa *mapa = new Mapa();
-    mapa->iniciarMapa((int)larguraJanela/4, (int)alturaJanela/5, 10, 10);
+    mapa->iniciarMapa((int)larguraJanela/6, (int)alturaJanela/6, 15, 15);
     mapa->setJogador(jogador);
     
     SetTargetFPS(60);

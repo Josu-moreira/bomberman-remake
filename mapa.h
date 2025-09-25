@@ -21,7 +21,7 @@ private:
     // vector<Entidades> listaEntidades;
     // vector<Objetos> listaObjetos;
     vector<vector<int>> matBloco;
-    Sprite *spriteFundo;
+    Sprite *spriteFundo, *spriteIndestrutivel;
     Jogador *jogador;
 
 
